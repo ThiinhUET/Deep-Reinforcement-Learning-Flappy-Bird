@@ -10,7 +10,7 @@ import torch.optim as optim
 
 KERNEL = np.array([[-1,-1,-1], [-1, 9,-1],[-1,-1,-1]])
 def processFrame(frame):
-    frame = frame[55:288,0:400] #crop image
+    frame = frame[55:288,0:400] 
     frame = cv2.cvtColor(frame,cv2.COLOR_BGR2GRAY) 
     frame = cv2.resize(frame,(84,84),interpolation=cv2.INTER_AREA)
     _ , frame = cv2.threshold(frame,50,255,cv2.THRESH_BINARY)
